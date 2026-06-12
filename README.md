@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sleep Tracker App - Next.js 15 Full-Stack Tutorial
 
-## Getting Started
+Ini adalah repositori untuk membangun aplikasi **Sleep Tracker** modern yang responsif dan siap produksi menggunakan ekosistem Next.js terbaru.
 
-First, run the development server:
+## 🚀 Deskripsi Proyek
+Proyek ini mengajarkan cara membangun aplikasi *full-stack* dari nol. Aplikasi ini memungkinkan pengguna untuk melacak kualitas tidur, memvisualisasikan data dalam grafik, serta mengelola riwayat rekaman tidur mereka dengan sistem autentikasi yang aman.
 
-```bash
+Berikut adalah pembaruan *Tech Stack* untuk aplikasi **Sleep Tracker** Anda, disesuaikan dengan versi *dependencies* spesifik yang Anda berikan agar sesuai dengan dokumentasi teknis yang relevan:
+
+### 🛠️ Tech Stack & Versi Proyek
+*   **Framework**: [Next.js](https://nextjs.org) **v15.5.19** (App Router, Server Actions, & SSR)
+*   **Library UI**: [React](https://react.dev) **v19.1.0** & [React DOM](https://react.dev) **v19.1.0**
+*   **Styling**: [Tailwind CSS](https://tailwindcss.com) (Untuk desain responsif)
+*   **Database & ORM**: [Neon PostgreSQL](https://neon.tech) dengan [Prisma](https://www.prisma.io) **v6.19.3**
+*   **Authentication**: [@clerk/nextjs](https://clerk.com) **v6.1.0**
+*   **Data Visualization**: [Chart.js](https://www.chartjs.org) **v4.4.9** & [React-Chartjs-2](https://react-chartjs-2.js.org) **v5.3.0**
+*   **Deployment**: [Vercel](https://vercel.com)
+
+## 📋 Fitur Utama
+*   **Autentikasi Pengguna**: Login/Sign up via Google, GitHub, Facebook, atau Email (didukung oleh Clerk).
+*   **Dashboard Dinamis**: Menampilkan data tidur personal dengan grafik interaktif.
+*   **Formulir Pelacakan**: Input kualitas tidur, durasi, dan tanggal.
+*   **Analitik Tidur**: Menampilkan rata-rata tidur (30 hari terakhir) serta analisis tidur terbaik & terburuk.
+*   **Riwayat & Manajemen**: Melihat riwayat tidur dan kemampuan untuk menghapus data.
+*   **Responsif**: Desain yang dioptimalkan untuk berbagai ukuran layar.
+
+## ⚙️ Cara Memulai
+
+### 1. Instalasi
+Pastikan Anda memiliki [Node.js](https://nodejs.org/) terinstal, lalu jalankan perintah berikut:
+bash
+npx create-next-app@latest sleep-tracker
+
+Ikuti konfigurasi: Pilih TypeScript, Tailwind CSS, dan App Router.
+
+### 2. Setup Database & Auth
+*   **Database**: Buat proyek di [Neon](https://neon.tech) dan sambungkan dengan Prisma.
+*   **Auth**: Konfigurasi [Clerk](https://clerk.com) di dashboard mereka dan tambahkan `API keys` ke dalam file `.env` lokal Anda.
+
+### 3. Menjalankan Aplikasi
+bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Buka [http://localhost:3000](http://localhost:3000) di browser Anda.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📚 Struktur Folder (Berdasarkan Tutorial)
+*   `app/`: Berisi rute aplikasi (pages, layouts).
+*   `components/`: Komponen UI yang dapat digunakan kembali (Navbar, Footer, Charts).
+*   `actions/`: *Server Actions* untuk logika database (Get records, Delete record, dsb).
+*   `lib/`: Konfigurasi koneksi database (DB instance).
+*   `types/`: Definisi tipe TypeScript untuk data aplikasi.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+--- 
+*Dibuat oleh React & Next js Projects with Sahand.*
