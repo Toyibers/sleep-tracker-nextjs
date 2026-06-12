@@ -52,4 +52,4 @@ Buka [http://localhost:3000](http://localhost:3000) di browser Anda.
 *   `types/`: Definisi tipe TypeScript untuk data aplikasi.
 
 --- 
-*Dibuat oleh React & Next js Projects with Sahand.*
+*Dibuat oleh React & Next js Projects with Moch Toyib.*
